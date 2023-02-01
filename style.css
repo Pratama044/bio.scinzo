@@ -1,0 +1,292 @@
+body{
+    background-color: #000000;
+    overflow-x: hidden;
+}
+link{
+    display: none;
+}
+.navbar{
+    background-color: #a2d9ff;
+}
+.mod{
+    z-index: 99;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    bottom: 100%;
+    /* animation: kuning 2.5s; */
+    animation-delay: s;
+    opacity: 1;
+}
+@keyframes kuning{
+    0%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.mod .wrapper a h2{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 6px 8px rgba(0, 0, 0, 0.414);
+}
+.mod .wrapper a h2 span{
+    color: rgb(247, 243, 0);
+    text-shadow: 1px 6px 8px rgba(0, 0, 0, 0.414);
+}
+.jumbotron{
+    padding-top: 1rem;
+    background-color: #a2d9ff;
+}
+.jumbotron img{
+    border: 3px solid rgb(244, 244, 244);
+    /* animation: putar 1.2s ease; */
+    animation-delay: 1.7s;
+}
+@keyframes putar{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.jumbotron p{
+    /* animation: pudar 4s ease; */
+    animation-delay: 1.7s;
+}
+@keyframes pudar{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.menu .container .row a{
+    background-color: #a2d9ff;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+    margin: .6rem auto;
+    height: 4rem;
+    box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.414);
+    border: 1px solid white;
+    transition: .3s;
+    width: 90%;
+    
+    
+
+}
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    60%{
+        transform: translateY(-15px);
+    }
+    80%{
+        transform: translateY(0);
+    }
+    100%{
+
+    }
+}
+.menu .container .row a:hover{
+    animation: bounce 1s linear;
+    color: white;
+}
+section .menu{
+    background-color: white;
+}
+.menu .container .row a svg{
+    align-items: center;
+    display: flex;
+    position: relative;
+    top: 26%;
+    width: 2rem;
+
+
+}
+.menu .container .row h1{
+    position: relative;
+    bottom: 35%
+
+}
+.menues{
+    
+    /* animation: menuAnim; */
+    animation-duration: calc(var(--i)*0.8s);
+    animation-delay: 1.7s;
+}
+@keyframes menuAnim{
+    from{
+        transform: translateX(500px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+footer{
+    background-color: #a2d9ff;
+    padding-top: 4rem;
+}
+footer p{
+    text-shadow: 1px 6px 8px rgba(0, 0, 0, 0.414);
+    padding-bottom: 1rem;
+}
+@media (min-width: 576px){
+    body{
+        background-color: #ffb900;
+    }
+    .mod{
+        min-width: 100vh;
+        background-color: #ffffff;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper{
+        overflow-y: hidden;
+        box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.414);
+        margin: auto;
+        width: 40%;
+        
+    }
+    .menu .container .row h1{
+        bottom: 40%;
+    }
+    html{
+
+    }
+}
+
+
+/* bagian loading */
+.iniloading{
+    z-index: 9;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    animation: layar 3s ease;
+    background-color: #000000;
+    height: 100%;
+
+}
+@keyframes layar{
+    0%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.isi{ 
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sampul{
+    position: absolute;
+    top: -35px;
+    transform: scale(1.5);
+}
+.loading{
+    height: 25px;
+    width: 1px;
+    position: absolute;
+    animation: rotate 3.5s linear infinite;
+}
+.loading .lingkarankecil{
+    top: 30px;
+    height: 7px;
+    width: 7px;
+    color: rgb(255, 255, 255);
+    background: white;
+    border-radius: 50%;
+    position: relative;
+}
+.teks{
+    font-family: sans-serif;
+    position: absolute;
+    bottom: -85px;
+    font-size: 25px;
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+    animation: kedip 1s linear infinite;
+}
+@keyframes kedip{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes rotate{
+    30%{
+        transform: rotate(220deg);
+    }
+    40%{
+        transform: rotate(450);
+        opacity: 1;
+    }
+    75%{
+        transform: rotate(720deg);
+        opacity: 1;
+    }
+    76%{
+        opacity: 0;
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+}
+.loading:nth-child(1){
+    animation-delay: 0.15s;
+}
+.loading:nth-child(2){
+    animation-delay: 0.3s;
+}
+.loading:nth-child(3){
+    animation-delay: 0.45s;
+}
+.loading:nth-child(4){
+    animation-delay: 0.6s;
+}
+.loading:nth-child(5){
+    animation-delay: 0.75s;
+}
+.loading:nth-child(6){
+    animation-delay: 0.9s;
+}
